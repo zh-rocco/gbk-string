@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install gbk-string
+$ npm install gbk-string -S
 ```
 
 ## Usage
@@ -20,6 +20,18 @@ encodeGBK('测试文本');
 //=> "%B2%E2%CA%D4%CE%C4%B1%BE"
 
 decodeGBK('%B2%E2%CA%D4%CE%C4%B1%BE');
+//=> "测试文本"
+```
+
+OR:
+
+```js
+const gbk = require('gbk-string');
+
+gbk.encodeGBK('测试文本');
+//=> "%B2%E2%CA%D4%CE%C4%B1%BE"
+
+gbk.decodeGBK('%B2%E2%CA%D4%CE%C4%B1%BE');
 //=> "测试文本"
 ```
 
@@ -43,4 +55,4 @@ Type: `string`
 
 ## License
 
-MIT © [no-nothing](https://github.com/no-nothing)
+MIT © [nahann](https://github.com/nahann)
