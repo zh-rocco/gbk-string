@@ -1,0 +1,30 @@
+{
+  "name": "gbk-string",
+  "version": "0.0.1",
+  "description": "中文 GBK 编码/解码, Example: `测试文本` → `%B2%E2%CA%D4%CE%C4%B1%BE`",
+  "keywords": ["gbk", "string", "text", "convert"],
+  "main": "index.js",
+  "files": ["index.js"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahann/gbk-string.git"
+  },
+  "author": {
+    "name": "nahann",
+    "email": "dahann.zh@gmail.com",
+    "url": "https://singple.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.4.19"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  },
+  "license": "MIT"
+}
