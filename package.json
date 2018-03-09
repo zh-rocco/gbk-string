@@ -1,21 +1,21 @@
 {
   "name": "gbk-string",
-  "version": "0.0.1",
-  "description": "中文 GBK 编码/解码, Example: `测试文本` → `%B2%E2%CA%D4%CE%C4%B1%BE`",
-  "keywords": ["gbk", "string", "text", "convert"],
+  "version": "0.1.0",
+  "description": "中文 GBK 编码/解码, 示例：`测试` -> `%B2%E2%CA%D4`",
+  "keywords": ["gbk", "string", "text", "convert", "node"],
   "main": "index.js",
   "files": ["index.js"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nahann/gbk-string.git"
+    "url": "https://github.com/zh-rocco/gbk-string.git"
   },
   "author": {
-    "name": "nahann",
-    "email": "dahann.zh@gmail.com",
+    "name": "zh-rocco",
+    "email": "rocco.mormont@gmail.com",
     "url": "https://singple.com"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=6"
   },
   "scripts": {
     "test": "ava"

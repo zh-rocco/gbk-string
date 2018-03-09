@@ -1,17 +1,21 @@
 # gbk-string
 
 > GBK 编码/解码<br>
-> Example: `测试文本` → `%B2%E2%CA%D4%CE%C4%B1%BE`
+> 示例：`测试文本` -> `%B2%E2%CA%D4%CE%C4%B1%BE`
 
-## Install
+## 背景
+
+使用 node 爬网站数据时，个别接口需要传入 GBK 编码后的字符串。
+
+## 安装
 
 ```
 $ npm install gbk-string -S
 ```
 
-## Usage
+## 使用
 
-In Node:
+此插件仅可运行在 Node 环境下，不支持浏览器环境。
 
 ```js
 const { encodeGBK, decodeGBK } = require('gbk-string');
@@ -23,7 +27,7 @@ decodeGBK('%B2%E2%CA%D4%CE%C4%B1%BE');
 //=> "测试文本"
 ```
 
-OR:
+或者：
 
 ```js
 const gbk = require('gbk-string');
@@ -49,10 +53,10 @@ Type: `string`
 
 Type: `string`
 
-## Dependencies
+## 依赖
 
 * [`iconv-lite`](https://github.com/ashtuchkin/iconv-lite)
 
 ## License
 
-MIT © [nahann](https://github.com/nahann)
+MIT © [zh-rocco](https://github.com/zh-rocco)
