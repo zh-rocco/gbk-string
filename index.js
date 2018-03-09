@@ -61,10 +61,10 @@ function decodeGBK(str) {
   if (typeof str !== 'string') throw new TypeError('Expected a string');
   if (str === '') return '';
 
-  let charMap = {};
-  let result = [];
-  let startPosition = '';
   let arr = [];
+  let startPosition = ''; // str 开头的特殊字符 0-9, a-z, A-Z, -._
+  let charMap = {}; // 存储 str 中间出现的特殊字符 0-9, a-z, A-Z, -._
+  let result = [];
 
   arr = str.split('%');
   startPosition = arr.shift();
@@ -74,14 +74,13 @@ function decodeGBK(str) {
       charMap[index] = currentValue.substr(2);
       arr[index] = currentValue.substr(0, 2);
     }
-    currentValue = arr[index];
-    arr[index] = '0x' + currentValue.toLowerCase();
+    arr[index] = '0x' + arr[index].toLowerCase();
   });
 
   result = iconv.decode(new Buffer(arr), 'GBK').split('');
 
   for (let key in charMap) {
-    let index = Math.floor(key / 2); // 汉字占用 2 字节
+    const index = Math.floor(key / 2); // 汉字占用 2 字节
     result[index] += charMap[key];
   }
 
