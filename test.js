@@ -14,6 +14,15 @@ test(t => {
   t.is(encodeGBK('1234567890'), '1234567890');
   t.is(encodeGBK('abcdef'), 'abcdef');
   t.is(encodeGBK('ABCDEF'), 'ABCDEF');
+  t.throws(() => {
+    encodeGBK(123);
+  });
+  t.throws(() => {
+    encodeGBK([]);
+  });
+  t.throws(() => {
+    encodeGBK({});
+  });
 });
 
 test(t => {
@@ -29,4 +38,13 @@ test(t => {
   t.is(decodeGBK('1234567890'), '1234567890');
   t.is(decodeGBK('abcdef'), 'abcdef');
   t.is(decodeGBK('ABCDEF'), 'ABCDEF');
+  t.throws(() => {
+    decodeGBK(123);
+  });
+  t.throws(() => {
+    decodeGBK([]);
+  });
+  t.throws(() => {
+    decodeGBK({});
+  });
 });
