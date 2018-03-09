@@ -1,10 +1,18 @@
 {
   "name": "gbk-string",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "中文 GBK 编码/解码, 示例：`测试` -> `%B2%E2%CA%D4`",
-  "keywords": ["gbk", "string", "text", "convert", "node"],
+  "keywords": [
+    "gbk",
+    "string",
+    "text",
+    "convert",
+    "node"
+  ],
   "main": "index.js",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zh-rocco/gbk-string.git"
