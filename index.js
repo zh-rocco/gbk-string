@@ -28,6 +28,11 @@ function isLowercase(decimalNumber) {
   return decimalNumber >= 97 && decimalNumber <= 122;
 }
 
+function fillZero(str) {
+  if (str.length === 1) return "0" + str;
+  else return str;
+}
+
 /**
  * 编码字符串
  *
@@ -45,7 +50,7 @@ function encodeGBK(text) {
     } else if (map.hasOwnProperty(currentValue)) {
       return map[currentValue];
     } else {
-      return '%' + currentValue.toString(16).toUpperCase();
+      return '%' + fillZero(currentValue.toString(16)).toUpperCase();
     }
   });
   return arr.join('');
@@ -87,4 +92,4 @@ function decodeGBK(str) {
   return startPosition + result.join('');
 }
 
-module.exports = { encodeGBK, decodeGBK };
+module.exports = {encodeGBK, decodeGBK};
